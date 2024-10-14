@@ -1,42 +1,177 @@
+/* Import Josefin Slab font */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@400;600&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    font-family: 'Josefin Slab', serif;
+    background-color: #121212; /* Black theme */
+    color: #ffffff; /* White text */
 }
 
 header {
-    background-color: #333;
+    background-color: #6a0dad; /* Deep purple */
     color: white;
-    padding: 10px;
     text-align: center;
+    padding: 20px 0;
+    animation: header-flash 3s infinite;
+}
+
+h1 {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin: 0;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
+    margin: 10px 0;
 }
 
 nav ul li {
     display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f0e68c; /* Khaki color on hover */
 }
 
 section {
-    padding: 20px;
+    text-align: center;
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px; /* Container width */
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #6a0dad; /* Purple heading */
+    animation: slide-up 1s ease forwards;
+}
+
+p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin: 20px 0;
+    animation: slide-up 1.5s ease forwards;
+}
+
+input[type="text"] {
+    padding: 10px;
+    width: 60%;
+    border: 2px solid #6a0dad;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: black;
+}
+
+button {
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    animation: button-flash 2s infinite alternate;
+}
+
+button:hover {
+    background-color: #a64fd7; /* Lighter purple */
+    transform: scale(1.05);
 }
 
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 20px;
+    background-color: #6a0dad;
+    color: white;
     position: fixed;
-    bottom: 0;
     width: 100%;
+    bottom: 0;
+    animation: footer-flash 3s infinite;
+}
+
+/* Animations */
+@keyframes button-flash {
+    0% { box-shadow: 0 0 5px 5px #a64fd7; }
+    100% { box-shadow: 0 0 15px 5px #6a0dad; }
+}
+
+@keyframes header-flash {
+    0%, 100% { background-color: #6a0dad; }
+    50% { background-color: #9932cc; /* Bright purple flash */ }
+}
+
+@keyframes footer-flash {
+    0%, 100% { background-color: #6a0dad; }
+    50% { background-color: #9932cc; }
+}
+
+/* New: Slide-up animation */
+@keyframes slide-up {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    animation: fade-in 1s ease forwards; /* Section fade-in */
+    animation-delay: 0.5s;
+}
+
+@keyframes fade-in {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Pagination and service buttons styling */
+#pagination, #library-services {
+    margin: 30px 0;
+}
+
+#pagination button, #library-services button {
+    margin: 10px 5px;
+}
+
+#service-output {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    background-color: #282828;
+    padding: 20px;
+    border-radius: 8px;
+    color: #f0e68c;
+    box-shadow: 0 0 10px #6a0dad;
+}
+
+/* Make sure all sections are centered in the container */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
