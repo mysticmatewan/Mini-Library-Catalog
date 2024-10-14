@@ -145,4 +145,51 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     renderBooks(currentPage); // Initial render
+
+    // Function to display books from the catalog
+function displayBooks(books) {
+    const bookList = document.getElementById('book-list');
+    bookList.innerHTML = ''; // Clear previous results
+
+    if (books.length === 0) {
+        bookList.innerHTML = '<p>No books found matching your search.</p>';
+        return;
+    }
+
+    const ol = document.createElement('ol'); // Use ordered list for catalog entries
+    books.forEach(book => {
+        const li = document.createElement('li');
+        li.innerHTML = `
+            <strong>Title:</strong> ${book.title}<br>
+            <strong>Author:</strong> ${book.author}<br>
+            <strong>Publisher:</strong> ${book.publisher}<br>
+            <strong>Year:</strong> ${book.year}<br>
+            <strong>Subject:</strong> ${book.subject}<br>
+            <strong>ISBN:</strong> ${book.isbn}
+        `;
+        ol.appendChild(li);
+    });
+    bookList.appendChild(ol);
+}
+
+// Search function
+function searchCatalog(query) {
+    // Convert query to lowercase for case-insensitive matching
+    const lowerQuery = query.toLowerCase();
+
+    // Filter the catalog based on title, author, or subject
+    const results = bookCatalog.filter(book => 
+        book.title.toLowerCase().includes(lowerQuery) || 
+        book.author.toLowerCase().includes(lowerQuery) || 
+        book.subject.toLowerCase().includes(lowerQuery)
+    );
+
+    // Display the filtered books
+    displayBooks(results);
+}
+
+// Add event listener for search button click
+document.getElementById('search-btn').addEventListener('click', function () {
+    const searchQuery = document.getElementById('search-bar').value;
+    searchCatalog(searchQuery);
 });
