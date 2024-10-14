@@ -254,7 +254,7 @@ section {
 }
 
 #book-list-container {
-    background-color: white; /* White background */
+    background-color: #FFFFFF; /* White background */
     border: 1px solid #ccc; /* Light grey border */
     border-radius: 5px; /* Rounded corners */
     padding: 20px; /* Spacing inside the box */
