@@ -267,3 +267,23 @@ section {
     max-height: 400px; /* Optional: limit height */
     overflow-y: auto; /* Scroll if content exceeds height */
 }
+
+/* unvisited link */
+a:link {
+  color: #FFFFFF;
+}
+
+/* visited link */
+a:visited {
+  color: #FFFFFF;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FFFFFF; 
+}
+
+/* selected link */
+a:active {
+  color: #FFFFFF;
+}
