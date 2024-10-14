@@ -171,25 +171,4 @@ function displayBooks(books) {
     });
     bookList.appendChild(ol);
 }
-
-// Search function
-function searchCatalog(query) {
-    // Convert query to lowercase for case-insensitive matching
-    const lowerQuery = query.toLowerCase();
-
-    // Filter the catalog based on title, author, or subject
-    const results = bookCatalog.filter(book => 
-        book.title.toLowerCase().includes(lowerQuery) || 
-        book.author.toLowerCase().includes(lowerQuery) || 
-        book.subject.toLowerCase().includes(lowerQuery)
-    );
-
-    // Display the filtered books
-    displayBooks(results);
-}
-
-// Add event listener for search button click
-document.getElementById('search-btn').addEventListener('click', function () {
-    const searchQuery = document.getElementById('search-bar').value;
-    searchCatalog(searchQuery);
 });
