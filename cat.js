@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
             series: "Library Science Series",
             notes: "Includes bibliographical references and index.",
             standardNumber: "ISBN: 9780262528494",
-            subject: "Information Science"
+            subject: "Information Science",
+            summary: "An introduction to the fundamental concepts of information science, focusing on the role of libraries in information dissemination.",
+            additionalAuthors: []
         },
         {
             title: "Library Management",
@@ -20,7 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
             series: "Library Operations",
             notes: "Focuses on modern management practices.",
             standardNumber: "ISBN: 9780198776399",
-            subject: "Library Management"
+            subject: "Library Management",
+            summary: "Covers various aspects of managing libraries, including staff management, budgeting, and service delivery.",
+            additionalAuthors: []
         },
         {
             title: "Digital Libraries",
@@ -31,7 +35,9 @@ document.addEventListener("DOMContentLoaded", function() {
             series: "Information Technology Series",
             notes: "Covers history and future of digital libraries.",
             standardNumber: "ISBN: 9780128236479",
-            subject: "Digital Libraries"
+            subject: "Digital Libraries",
+            summary: "Explores the evolution of digital libraries and their role in modern information access.",
+            additionalAuthors: []
         },
         {
             title: "Data Science for Librarians",
@@ -42,7 +48,9 @@ document.addEventListener("DOMContentLoaded", function() {
             series: "Data Science in Libraries",
             notes: "Emphasis on data-driven decision making.",
             standardNumber: "ISBN: 9783030725631",
-            subject: "Data Science"
+            subject: "Data Science",
+            summary: "Discusses the importance of data science in library practices and decision-making.",
+            additionalAuthors: []
         },
         {
             title: "Information Retrieval Systems",
@@ -53,24 +61,23 @@ document.addEventListener("DOMContentLoaded", function() {
             series: "",
             notes: "Classic text on information retrieval.",
             standardNumber: "ISBN: 9780134638372",
-            subject: "Information Retrieval"
+            subject: "Information Retrieval",
+            summary: "A comprehensive overview of information retrieval systems and their applications.",
+            additionalAuthors: []
         },
         {
-        title: "Wisdom of the Holy Prophet",
-        author: "Muhammad Zafrulla Kahn, Sir",
-        publication: "London, The London Mosque",
-        publicationYear: 1971,
-        physicalDescription: "88 pages; 19 cm",
-        notes: "OLD RECORD",
-        standardNumber: "ISBN: 0855250097",
-        subject: "Hadith (Selections: extracts, etc)",
-        additionalInfo: {
-            recordNumber: "b13445704",
-            oldCatalog: "OLDCAT",
-            status: "HELD"
+            title: "Wisdom of the Holy Prophet",
+            author: "Muhammad Zafrulla Kahn, Sir",
+            publication: "London, The London Mosque",
+            publicationYear: 1971,
+            physicalDescription: "88 pages; 19 cm",
+            notes: "OLD RECORD",
+            standardNumber: "ISBN: 0855250097",
+            subject: "Hadith (Selections: extracts, etc)",
+            summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
+            additionalAuthors: []
         }
-    }
-        // Add more books to cover over 30 with the same 8 fields
+        // Add more books to cover over 30 with the same fields
     ];
 
     const itemsPerPage = 10;
@@ -90,14 +97,15 @@ document.addEventListener("DOMContentLoaded", function() {
             bookHTML += `
                 <li>
                     <strong>Title:</strong> ${book.title} <br>
-                    <strong>Author:</strong> ${book.author} <br>
-                    <strong>Edition:</strong> ${book.edition} <br>
+                    <strong>Author:</strong> ${book.author} ${book.additionalAuthors.length > 0 ? ' & ' + book.additionalAuthors.join(', ') : ''} <br>
+                    <strong>Edition:</strong> ${book.edition || 'N/A'} <br>
                     <strong>Publication:</strong> ${book.publication} <br>
                     <strong>Physical Description:</strong> ${book.physicalDescription} <br>
-                    <strong>Series:</strong> ${book.series} <br>
+                    <strong>Series:</strong> ${book.series || 'N/A'} <br>
                     <strong>Notes:</strong> ${book.notes} <br>
                     <strong>Standard Number:</strong> ${book.standardNumber} <br>
-                    <strong>Subject:</strong> ${book.subject} <br><br>
+                    <strong>Subject:</strong> ${book.subject} <br>
+                    <strong>Summary:</strong> ${book.summary} <br><br>
                 </li>`;
         }
         bookHTML += "</ol>";
@@ -162,28 +170,28 @@ document.addEventListener("DOMContentLoaded", function() {
     renderBooks(currentPage); // Initial render
 
     // Function to display books from the catalog
-function displayBooks(books) {
-    const bookList = document.getElementById('book-list');
-    bookList.innerHTML = ''; // Clear previous results
+    function displayBooks(books) {
+        const bookList = document.getElementById('book-list');
+        bookList.innerHTML = ''; // Clear previous results
 
-    if (books.length === 0) {
-        bookList.innerHTML = '<p>No books found matching your search.</p>';
-        return;
+        if (books.length === 0) {
+            bookList.innerHTML = '<p>No books found matching your search.</p>';
+            return;
+        }
+
+        const ol = document.createElement('ol'); // Use ordered list for catalog entries
+        books.forEach(book => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <strong>Title:</strong> ${book.title}<br>
+                <strong>Author:</strong> ${book.author} ${book.additionalAuthors.length > 0 ? ' & ' + book.additionalAuthors.join(', ') : ''}<br>
+                <strong>Publisher:</strong> ${book.publisher || 'N/A'}<br>
+                <strong>Year:</strong> ${book.year || 'N/A'}<br>
+                <strong>Subject:</strong> ${book.subject}<br>
+                <strong>ISBN:</strong> ${book.standardNumber}
+            `;
+            ol.appendChild(li);
+        });
+        bookList.appendChild(ol);
     }
-
-    const ol = document.createElement('ol'); // Use ordered list for catalog entries
-    books.forEach(book => {
-        const li = document.createElement('li');
-        li.innerHTML = `
-            <strong>Title:</strong> ${book.title}<br>
-            <strong>Author:</strong> ${book.author}<br>
-            <strong>Publisher:</strong> ${book.publisher}<br>
-            <strong>Year:</strong> ${book.year}<br>
-            <strong>Subject:</strong> ${book.subject}<br>
-            <strong>ISBN:</strong> ${book.isbn}
-        `;
-        ol.appendChild(li);
-    });
-    bookList.appendChild(ol);
-}
 });
