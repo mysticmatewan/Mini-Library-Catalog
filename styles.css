@@ -175,3 +175,61 @@ section {
     justify-content: center;
     align-items: center;
 }
+
+#search-bar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #6a0dad; /* Purple border */
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Josefin Slab', serif;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+#search-bar:focus {
+    border-color: #c9a0dc; /* Lighter purple on focus */
+    box-shadow: 0 0 10px #c9a0dc;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background-color: #6a0dad; /* Purple background */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Josefin Slab', serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: #4b0082; /* Darker purple on hover */
+}
+
+#search-btn:active {
+    transform: scale(0.98); /* Slight button press effect */
+}
+
+/* Subtle animation for the search bar */
+#search-bar, #search-btn {
+    animation: fadeInUp 1s ease both;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
