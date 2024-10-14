@@ -55,6 +55,21 @@ document.addEventListener("DOMContentLoaded", function() {
             standardNumber: "ISBN: 9780134638372",
             subject: "Information Retrieval"
         },
+        {
+        title: "Wisdom of the Holy Prophet",
+        author: "Muhammad Zafrulla Kahn, Sir",
+        publication: "London, The London Mosque",
+        publicationYear: 1971,
+        physicalDescription: "88 pages; 19 cm",
+        notes: "OLD RECORD",
+        standardNumber: "ISBN: 0855250097",
+        subject: "Hadith (Selections: extracts, etc)",
+        additionalInfo: {
+            recordNumber: "b13445704",
+            oldCatalog: "OLDCAT",
+            status: "HELD"
+        }
+    }
         // Add more books to cover over 30 with the same 8 fields
     ];
 
