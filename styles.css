@@ -233,3 +233,24 @@ section {
         transform: translateY(0);
     }
 }
+
+#searched-book-list {
+    margin-top: 20px;
+}
+
+.book {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+}
+
+.book h3 {
+    margin: 0;
+    color: #4B0082; /* Dark purple */
+}
+
+.book p {
+    margin: 5px 0;
+}
