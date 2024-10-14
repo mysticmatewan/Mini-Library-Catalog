@@ -254,3 +254,18 @@ section {
 .book p {
     margin: 5px 0;
 }
+
+#book-list-container {
+    background-color: white; /* White background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 20px; /* Spacing inside the box */
+    margin: 20px 0; /* Spacing outside the box */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#book-list {
+    /* Additional styling for the book list can go here */
+    max-height: 400px; /* Optional: limit height */
+    overflow-y: auto; /* Scroll if content exceeds height */
+}
