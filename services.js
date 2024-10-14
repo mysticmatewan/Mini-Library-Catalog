@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const books = ["JavaScript: The Good Parts", "Eloquent JavaScript", "Clean Code", "The Pragmatic Programmer"];
+    const books = ["Introduction to Information Science", "Library Management", "Digital Libraries", "Data Science for Librarians", "Information Retrieval Systems"];
 
     const borrowedBooks = [];
 
