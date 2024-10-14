@@ -94,6 +94,7 @@ button:hover {
 
 footer {
     text-align: center;
+    margin: auto;
     padding: 20px;
     background-color: #6a0dad;
     color: white;
