@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
         {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
                           {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -307,7 +307,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -384,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -461,7 +461,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -538,7 +538,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -615,7 +615,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -692,7 +692,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -769,7 +769,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
@@ -846,7 +846,7 @@ document.addEventListener("DOMContentLoaded", function() {
             subject: "Hadith (Selections: extracts, etc)",
             summary: "A collection of sayings and teachings of the Prophet Muhammad, focusing on their wisdom and relevance.",
             additionalAuthors: []
-        }
+        },
 {
             title: "Introduction to Information Science",
             author: "David Lankes",
